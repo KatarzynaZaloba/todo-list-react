@@ -9,4 +9,8 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   background: #eee;
+  background-image: url("../public/background.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: inherit;
 }
