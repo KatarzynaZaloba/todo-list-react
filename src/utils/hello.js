@@ -5,4 +5,4 @@ const hello = () => {
 const name ="Krzysiek";
 export { name }; 
 
-export {hello as goodbye };
+export {hello as goodbye, name };
