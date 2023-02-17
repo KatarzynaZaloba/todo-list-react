@@ -5,7 +5,7 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-import { goodbye as hello } from './utils/hello';
+import { goodBye as hello } from './utils/hello';
 
 hello();
 
