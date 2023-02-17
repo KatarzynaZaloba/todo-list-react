@@ -58,4 +58,4 @@ In my free time I am jogging through the forest near my home - in my opinion it'
 
 That's it from me for now. If you would like to know more about my eperience, please visit my [Linkedin](https://www.linkedin.com/in/katarzyna-zaloba/) .
 
-![Katarzyna](./public/Kate.jfif)
+![Katarzyna](./public/Kate.jpg)
