@@ -18,7 +18,9 @@ const Tasks = ({ tasks, hideDoneTasks }) => (
                     }>
                     {task.content}
                 </span>
-                <button className="tasks__button tasks__button--remove">
+                <button className="tasks__button tasks__button--remove"
+                onClick={() => console.log("Kliknięto w koszyk!")}
+                > 
                     🗑
                 </button>
             </li>
