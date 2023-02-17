@@ -5,10 +5,9 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-import hello { name } from './utils/hello';
+import goodbye { name } from './utils/hello';
 
-hello();
-console.log(name);
+goodbye();
 
 const tasks = [
   { id: 1, content: "przejść na Reacta", done: false },
