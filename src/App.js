@@ -5,9 +5,9 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-import goodbye { name } from './utils/hello';
+import { goodbye as hello } from './utils/hello';
 
-goodbye();
+hello();
 
 const tasks = [
   { id: 1, content: "przejść na Reacta", done: false },
@@ -25,17 +25,17 @@ function App() {
         title="Dodaj nowe zadanie"
         body={<Form />}
       />
-      
+
       <Section
         title="Lista zadań"
         body={
-        <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
+          <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
         }
         extraHeaderContent={
           <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />
         }
       />
-      </ Container>
+    </ Container>
   );
 }
 
