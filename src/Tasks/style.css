@@ -1,7 +1,7 @@
 .tasks {
     list-style-type: none;
     margin-left: 0px;
-    padding-left: 0px;
+    padding-left: 20px;
 }
 
 .tasks__item { 
