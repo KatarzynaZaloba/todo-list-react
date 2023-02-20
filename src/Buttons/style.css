@@ -3,25 +3,31 @@
     flex-wrap: wrap;
 }
 
-.buttons__button {
-    background: transparent;
-    color: hsl(305, 47%, 21%);
+.buttons__button{
+    text-decoration:none;
+    color:teal;
+    margin-left:25px;
     border: none;
-    margin: 0 0 0 20px;
-    transition: color 0.3s;
+    background-color:white;
+    cursor:pointer;
 }
 
-@media(max-width: 767px) {
-    .buttons__button {
-        flex-basis: 100%;
-        margin: 10px;
-    }
+.buttons__button:disabled{
+    color:#ccc;
+    cursor:default;
 }
 
 .buttons__button:hover {
     color: hsl(305, 47%, 30%);
 }
 
-.buttons__button:disabled {
-    color: #b1aaaa;
+@media (max-width: 767px) {
+    .buttons__button{
+        flex-basis:100%;
+        margin:5px;
+    }
+    .buttons{
+        display:flex;
+        flex-wrap:wrap;
+    }
 }
