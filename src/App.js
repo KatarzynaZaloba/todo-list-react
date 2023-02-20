@@ -6,11 +6,13 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
+
+
 function App() {
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState([
     { id: 1, content: "przejść na Reacta", done: false },
-    { id: 2, content: "zjeśc obiad", done: true },
+    { id: 2, content: "zjeść obiad", done: true },
   ]);
 
   const toggleHideDone = () => {
@@ -32,34 +34,55 @@ function App() {
   }
 
   const setAllDone = () => {
-    setTasks(tasks => tasks.map(task => ({...task, done: true})));
+    setTasks(tasks => tasks.map(task => ({
+      ...task,
+      done: true,
+    })));
   };
 
-  const addNewTask =(content) => {
-    setTasks(tasks => [...tasks, {
-      content: content, done: false, id: tasks.length === 0 ? 1: tasks[tasks.length - 1].id + 1,
-    }]);
+  const addNewTask = (content) => {
+    if (content.length > 0) {
+      setTasks(tasks => [
+        ...tasks,
+        {
+          content,
+          done: false,
+          id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+        }
+      ])
+    }
+
   };
 
   return (
     <Container>
-      <Header
-        title="Lista zadań" />
+      <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask}/>}
+        body={
+          <Form
+            addNewTask={addNewTask}
+          />
+        }
       />
-
       <Section
         title="Lista zadań"
         body={
-          <Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} toggleTaskDone={toggleTaskDone} />
-        }
+          <Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone}
+          />}
         extraHeaderContent={
-          <Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setAllDone={setAllDone} />
-        }
+          <Buttons
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleHideDone={toggleHideDone}
+            setAllDone={setAllDone}
+          />}
       />
-    </ Container>
+    </Container>
   );
 }
 
