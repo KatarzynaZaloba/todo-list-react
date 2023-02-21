@@ -3,31 +3,36 @@
     flex-wrap: wrap;
 }
 
-.buttons__button{
-    text-decoration:none;
-    color:teal;
-    margin-left:25px;
-    border: none;
-    background-color:white;
-    cursor:pointer;
+@media (max-width: 768px) {
+    .buttons {
+       margin-bottom: 20px;
+    }
 }
 
-.buttons__button:disabled{
-    color:#ccc;
-    cursor:default;
+.buttons__button {
+    background: transparent;
+    border: none;
+    color: teal;
+    margin: 0 0 0 20px;
+    transition: color 0.5s;
+}
+
+@media (max-width: 768px) {
+    .buttons__button {
+        flex-basis: 100%;
+        margin: 10px;
+    }
 }
 
 .buttons__button:hover {
-    color: hsl(305, 47%, 30%);
+    color: hsl(180, 100%, 15%);
+
 }
 
-@media (max-width: 767px) {
-    .buttons__button{
-        flex-basis:100%;
-        margin:5px;
-    }
-    .buttons{
-        display:flex;
-        flex-wrap:wrap;
-    }
+.buttons__button:active {
+    color: hsl(180, 100%, 35%);
+}
+
+.buttons__button:disabled {
+    color: #ccc;
 }
