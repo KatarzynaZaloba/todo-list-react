@@ -2,7 +2,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## **Demo**: 
-[Please click here to use my taskList](https://katarzynazaloba.github.io/tasksList/)
+[Please click here to use my taskList](https://katarzynazaloba.github.io/todo-list-react/)
 
 ## **How it works**
 
